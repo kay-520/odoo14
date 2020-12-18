@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="academy_teachers_form_view">
+            <field name="name">academy.teachers.form</field>
+            <field name="model">academy.teachers</field>
+            <field name="arch" type="xml">
+                <form string="教师表">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="gender"/>
+                            <field name="age"/>
+                            <field name="teach_school"/>
+                        </group>
+                        <group>
+                            <field name="academy_id"/>
+                            <field name="education"/>
+                            <field name="judge_status"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="academy_teachers_tree_view">
+            <field name="name">academy.teachers.tree</field>
+            <field name="model">academy.teachers</field>
+            <field name="arch" type="xml">
+                <tree name="教师总览">
+                    <field name="name"/>
+                    <field name="gender"/>
+                    <field name="education"/>
+                    <field name="judge_status"/>
+                    <field name="teach_school"/>
+<!--                    添加详情按钮  class= "oe_highlight" 样式类名 高亮显示-->
+                    <button name="action_supplier_form_applicant" class="oe_highlight" string="查看详情" type="object"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="reload_academy_teachers_form_view">
+            <field name="name">reload.teachers.form</field>
+            <field name="model">reload.teachers</field>
+            <field name="arch" type="xml">
+                <form string="教师表">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="gender"/>
+                            <field name="age"/>
+                            <field name="teach_school"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

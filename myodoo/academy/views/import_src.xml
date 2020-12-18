@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    页面加载js-->
+    <template id="assets_backend" name="tree view menu" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/academy/static/src/js/equip_sync_button.js"/>
+<!--            <script type="text/javascript" src="/academy/static/src/js/demo.js"/>-->
+        </xpath>
+    </template>
+</odoo>

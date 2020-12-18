@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template id="template" xml:space="preserve">
+    <!-- 拓展Tree视图增加自定义按钮 -->
+    <t t-extend="ListView.buttons">
+        <t t-jquery="button.o_list_button_save" t-operation="after">
+            <t t-if="widget and widget.modelName == 'academy.teachers'">
+                <button type="button" class="btn btn-primary o_list_tender_button_say_hello" style="display:inline-block;">Tree:Say Hello</button>
+            </t>
+        </t>
+    </t>
+    <!-- 拓展Form视图增加自定义按钮 -->
+<!--    form表单中的按钮-->
+    <t t-extend="FormView.buttons">
+        <t t-jquery="button.o_form_button_create" t-operation="after">
+            <t t-if="widget and widget.modelName == 'academy.teachers'">
+<!--            display:inline-block; 行内块元素-->
+                <button type="button" class="btn btn-primary o_list_tender_button_say_hello" style="display:inline-block;">From:Say Hello</button>
+            </t>
+        </t>
+    </t>
+<!--    使用t-call-assets指令将捆绑包中的文件插入到模块中-->
+    <t t-call-assets="web.assets_common" t-js="false"/>
+    <t t-call-assets="web.assets_common" t-css="false"/>
+</template>

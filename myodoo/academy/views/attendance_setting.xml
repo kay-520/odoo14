@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_day_compute" model="ir.actions.client">
+        <field name="name">日计算申请</field>
+        <field name="tag">custom_page.demo</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem parent="attendance_my_menu" id="attendance_day_compute_menu" name="日计算申请" sequence="3"
+              action="action_day_compute"/>
+</odoo>

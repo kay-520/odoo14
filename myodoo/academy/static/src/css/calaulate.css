@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+
+.openerp .oe_web_assess {
+    margin: 0px;
+}
+
+.openerp .oe_web_assess .page_title {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px 0px 10px 0px;
+    color: #000000;
+    text-align: left;
+}
+
+.openerp .oe_web_assess .question_title {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 15px 0px 10px 0px;
+    color: #7c7bad;
+    text-align: left;
+}
+
+.openerp .oe_web_assess .footer {
+    margin-top: 30px;
+}
+
+.openerp .oe_web_assess .base_label {
+
+    letter-spacing: 50px;
+
+}
+
+.openerp .oe_web_assess .base_right {
+
+    float: right;
+
+}

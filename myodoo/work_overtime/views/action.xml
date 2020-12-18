@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--    <record model="ir.actions.act_window" id="work_action">-->
+    <!--        <field name="name">加班申请</field>-->
+    <!--        <field name="res_model">work.overtime</field>-->
+    <!--        <field name="view_mode">tree,form</field>-->
+    <!--    </record>-->
+    <act_window id="work_action"
+                name="加班申请"
+                res_model="work.overtime"
+                view_mode="tree,form"/>
+</odoo>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="sync_equip_template" xml:space="preserve">
+    <!--    拓展tree视图增加自定义按钮-->
+    <!--    t-extend,该模块继承另一个模块-->
+
+    <t t-extend="ListView.buttons">
+        <!--        jquery的css选择器,t-jquery 视图提供的按钮标识， 后面选择器找到元素后执行后的动作, append(追加),replace(替换)-->
+        <t t-jquery=".o_list_buttons" t-operation="append">
+                  <!-- 找到名为 "academy.teachers"的模型，并在它的列表(tree)视图后面append一个按钮 -->
+            <t t-if="widget and widget.modelName == 'academy.teachers'">
+                      <!--btn表示按钮，btn-sm小按钮，btn-default默认按钮，btn-primary主要按钮？-->
+                <!--              <a href="f:\intelligentserviceplatform-13.0\my-modules\academy\static\src\js\equip_sync_button.js">create</a>-->
+                <button class="btn btn-primary o_list_tender_bt_sync_equip" type="button">create</button>
+                <!--              <button name="creat_teacher" class="oe_highlight" string="查看" type="object"/>-->
+<!--                <button type="button" value="一个按钮" onclick="javascript:window.location.href='http://www.baidu.com/'"/>-->
+                <!--              <button name="%(academy_teachers.action_academy_teachers)d" class="oe_link"  type="action">create</button>-->
+                <button name="academy_teachers.academy_teachers_button_search" class="btn btn-primary"
+                        type="button" string="search">
+<!--                          <select>-->
+<!--                              <option value="name">姓名</option>-->
+<!--                              <option value="gender">性别</option>-->
+<!--                              <option value="age">年龄</option>-->
+<!--                              <option value="education">学历</option>-->
+<!--                              <option value="judge_status">是否在职</option>-->
+<!--                          </select>-->
+                </button>
+                <button class="btn btn-primary o_list_tender_bt_sync_change" type="button">update</button>
+                <button class="btn btn-primary o_list_tender_bt_sync_delete" type="button">delete</button>
+<!--                <button name="%(academy.action_academy_teachers)d" class="btn btn-primary" type="action">创建字段吧</button> -->
+
+                  </t>
+              </t>
+            </t>
+    </templates>
+

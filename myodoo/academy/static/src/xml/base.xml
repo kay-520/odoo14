@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+        <div t-name="quality_assess" t-attf-class="oe_web_assess">
+  	    </div>
+    <t t-name="DemoPage">
+        <div t-attf-class="page_title">
+            <label>日计算申请</label>
+        </div>
+        <div t-attf-class="question_title">
+            <div class="oe_inline">
+                <label style="padding-right:30px">考勤日期</label>
+                <input type="date" name="start_date" class="oe_left"/>
+                <span class="oe_left">至</span>
+                <input type="date" name="end_date" class="oe_left"/>
+            </div>
+            <br/>
+            <label style="color:red">如果有刷卡记录，但某段时间的考勤记录异常，请申请日计算。</label>
+        </div>
+        <div class="footer">
+            <button class="oe_assess_commit" style="float:right">提交</button>
+        </div>
+    </t>
+
+</templates>
+

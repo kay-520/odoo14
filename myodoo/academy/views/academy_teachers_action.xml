@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_academy_teachers" model="ir.actions.act_window">
+        <field name="name">教师信息</field>
+        <field name="res_model">academy.teachers</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="reload_action_academy_teachers" model="ir.actions.act_window">
+        <field name="name">教师表</field>
+        <field name="res_model">reload.teachers</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="reload_academy_teachers_form_view"></field>
+        <field name="target">current</field>
+    </record>
+</odoo>

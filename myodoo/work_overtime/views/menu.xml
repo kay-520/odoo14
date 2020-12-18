@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+        <menuitem sequence="1" action="work_action" name="加班申请" id="work_menu"/>
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_academy,access_academy,model_academy,base.group_user,1,1,1,1
+access_academy_teachers,access_academy_teachers,model_academy_teachers,base.group_user,1,1,1,1
+access_reload_teachers,access_reload_teachers,model_reload_teachers,base.group_user,1,1,1,1
+
+

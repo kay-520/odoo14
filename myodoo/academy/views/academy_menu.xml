@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--        sequence设置一个数字来在展示菜单项时进行排序-->
+    <menuitem
+        id="academy_menu_he"
+        name="学院教师"
+        sequence="0"
+    />
+    <menuitem
+        id="academy_menu"
+        name="学院介绍"
+        sequence="1"
+        parent="academy_menu_he"
+        action="action_academy_profile"
+    />
+
+</odoo>

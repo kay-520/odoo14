@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="work_form_view" model="ir.ui.view">
+        <field name="name">work.overtime.form</field>
+        <field name="model">work.overtime</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <notebook>
+                        <page string="加班详情">
+                            <group colspan="2" string="加班申请"></group>
+                            <group>
+                                <group>
+                                    <field name="name"/>
+                                </group>
+                                <group>
+                                    <field name="itCode"/>
+                                </group>
+                            </group>
+                            <group>
+                                <group>
+                                    <field name="department"/>
+                                </group>
+                                <group>
+                                    <field name="addTime"/>
+                                </group>
+                            </group>
+                            <group>
+                                <group>
+                                    <field name="duration"/>
+                                </group>
+                                <group>
+                                    <field name="description"/>
+                                </group>
+                            </group>
+                            <group>
+                                <group>
+                                    <field name="depPrincipal" readonly="1"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="work_tree_view" model="ir.ui.view">
+        <field name="name">work.overtime.tree</field>
+        <field name="model">work.overtime</field>
+        <field eval="25" name="priority"/>
+        <field name="arch" type="xml">
+            <tree string="加班列表">
+                <field name="name"/>
+                <field name="itCode"/>
+                <field name="department"/>
+                <field name="addTime"/>
+                <field name="duration"/>
+                <field name="description"/>
+                <field name="depPrincipal"/>
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>

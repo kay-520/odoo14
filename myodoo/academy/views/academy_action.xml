@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_academy_profile" model="ir.actions.act_window">
+        <field name="name">学院介绍</field>
+<!--        用于展示视图的模型-->
+        <field name="res_model">academy</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

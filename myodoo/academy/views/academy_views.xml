@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="academy_form_view">
+            <field name="name">academy</field>
+            <field name="model">academy</field>
+            <field name="arch" type="xml">
+                <form string="学校详情">
+                    <header>
+
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="academy_name"/>
+                                <field name="teacher_count"/>
+                            </group>
+                            <group>
+                                <field name="email_code"/>
+                                <field name="description"/>
+<!--                                <field name="line_ids" widget="many2many_tags"/>-->
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="教师信息" name="teacher_ids">
+<!--                                editable='bottom' 对字段进行编辑 -->
+                                <field name="teacher_ids" editable="bottom"
+                                       context="{'tree_view_ref':'academy.academy_teachers_tree_view',
+                                       'form_view_ref': 'academy.academy_teachers_form_view'}">
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="academy_tree_view">
+            <field name="name">academy.tree</field>
+            <field name="model">academy</field>
+            <field name="arch" type="xml">
+                <tree name="学院总览">
+                    <field name="academy_name"/>
+                    <field name="teacher_count"/>
+                    <field name="email_code"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="academy_teachers_menu"
+        name="教师详情"
+        parent="academy_menu_he"
+        sequence="2"
+        action="action_academy_teachers"
+    />
+</odoo>

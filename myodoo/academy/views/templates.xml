@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+<!--        index 是我们前面用路由器（Controllers）里面定义的页面，odoo就可以知道，我们需要它渲染的页面是当前我们正在编辑的代码。-->
+        <template id="index">
+            <title>Academy</title>
+<!--             t-foreach 来将从后端返回的数据进行前端展示。t-as 是循环-->
+            <t t-foreach="teachers" t-as="teacher">
+<!--                t-esc访问一切数据库的数据-->
+                <p><t t-esc="teacher.id"/> <t t-esc="teacher.name"/></p>
+            </t>
+        </template>
+<!--        <template id="index">-->
+<!--            <t t-call="website.layout">-->
+<!--                <t t-set="title">Academy</t>-->
+<!--                <div class="oe_structure">-->
+<!--                    <div class="container">-->
+<!--                        <t t-foreach="teachers" t-as="teacher">-->
+<!--                            <p><t t-esc="teacher.id"/> <t t-esc="teacher.name"/></p>-->
+<!--                        </t>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </t>-->
+<!--        </template>-->
+<!--
+        <template id="listing">
+          <ul>
+            <li t-foreach="objects" t-as="object">
+              <a t-attf-href="#{ root }/objects/#{ object.id }">
+                <t t-esc="object.display_name"/>
+              </a>
+            </li>
+          </ul>
+        </template>
+        <template id="object">
+          <h1><t t-esc="object.display_name"/></h1>
+          <dl>
+            <t t-foreach="object._fields" t-as="field">
+              <dt><t t-esc="field"/></dt>
+              <dd><t t-esc="object[field]"/></dd>
+            </t>
+          </dl>
+        </template>
+-->
+    </data>
+</odoo>
